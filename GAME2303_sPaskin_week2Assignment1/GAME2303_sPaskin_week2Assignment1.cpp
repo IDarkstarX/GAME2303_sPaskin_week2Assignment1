@@ -39,7 +39,7 @@ void strng(string s) {
             //skips vowels
         }
         else {
-            s2 = s[i];
+            s2 + s[i]; //add consonant to end of s2
         }
     }
     cout << s2;
