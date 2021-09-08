@@ -20,16 +20,28 @@ void gnirts(string s) {
     string s2;
 
     for (int i = 0; i < s.size(); i++) {
-        /*
-        if (s[i] == ' ') {
-            s2 = ' ' + s2;
-        }
-        */
+        
         s2 = s[i] + s2;
     }
     cout << s.size() << "\n";
     cout << s.length() << "\n";
     cout << s << "\n";
+    cout << s2;
+}
+
+void strng(string s) {
+
+    string s2;
+
+    for (int i = 0; i < s.size(); i++) {
+
+        if (s[i] == 'a'|| s[i] == 'e'|| s[i] == 'i'|| s[i] == 'o'|| s[i] == 'u') {
+            //skips vowels
+        }
+        else {
+            s2 = s[i];
+        }
+    }
     cout << s2;
 }
 
@@ -41,6 +53,8 @@ int main() // cout << "\n";
     int num2;
     string sin;
     
+    cin.clear();
+
     cout << "Please make a selection using the number in ():\n\n";
     cout << "(1) Divisible by two numbers.\n";
     cout << "(2) Reverse string.\n";
@@ -69,8 +83,13 @@ int main() // cout << "\n";
         gnirts(sin);
         break;
     case 3:
-        break;
         cout << "(3) Vowel remover.\n\n";
+        cout << "Please enter string to remove vowels from.\n";
+        cin.ignore();
+        getline(cin, sin);
+        cout << "Thank you.\n";
+        strng(sin);
+        break;
     default:
         cout << "(Any others) Exit.";
         break;
