@@ -32,14 +32,14 @@ void gnirts(string s) {
 void strng(string s) {
 
     string s2;
+    char c;
 
-    for (int i = 0; i < s.size(); i++) {
-
-        if (s[i] == 'a'|| s[i] == 'e'|| s[i] == 'i'|| s[i] == 'o'|| s[i] == 'u') {
+    for (int i = 0; i < s.length(); i++) {
+        c = s[i];
+        if (tolower(c) == 'a'|| tolower(c) == 'e'|| tolower(c) == 'i'|| tolower(c) == 'o'|| tolower(c) == 'u') {
             //skips vowels
-        }
-        else {
-            s2 + s[i]; //add consonant to end of s2
+        } else {
+            s2 += s[i]; //add consonant to end of s2
         }
     }
     cout << s2;
